@@ -31,6 +31,24 @@ for(let count = 1; count <= repetitionsQty; count = count +1){ //siclo for para 
         } else {
             winner = "Both"
         }
+    } else if (machineMove === "Papel"){
+        if(userMove === "Tijera") {
+            winner = "User";
+        } else if (userMove === "Piedra") {
+            winner = "Machine";
+        } else {
+            winner = "Both";
+        }
+    } else if (machineMove === "Tijera"){
+        if(userMove === "Piedra"){
+            winner = "User";
+        } else if (userMove === "Papel"){
+            winner = "Machine";
+        }else {
+            winner = "Both";
+        }
+    }   else {
+        winner = "Unknown"
     }
 
     console.log({machineMove, randomMoveIndex})

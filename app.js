@@ -8,7 +8,7 @@ for(let count = 1; count <= repetitionsQty; count = count +1){ //siclo for para 
     // pedir una respuesta
     const userMove = prompt("Ingrese su jugada, debe ser: Piedra, Papel o Tijera");
 
-    const randomMoveIndex = Math.floor(Math.random() * 3);  /// 1   2    o    3  (elija aleatoriamente)
+    const randomMoveIndex = Math.floor(Math.random() * (4 - 1)) +1;  /// 1   2    o    3  (elija aleatoriamente) (tiene que ser hasta el cuatro de lo contrario toma del 0 al 2)
     let machineMove = "";
     
     if (randomMoveIndex === 1) {
@@ -26,31 +26,41 @@ for(let count = 1; count <= repetitionsQty; count = count +1){ //siclo for para 
     if (machineMove === "Piedra"){
         if(userMove === "Papel") {
             winner = "User"
+            alert("El ganador es: ${winner}");
         } else if (userMove ==="Tijera") {
             winner = "Machine"
+            alert("${winner}");
         } else {
             winner = "Both"
+            alert("El ganador es: ${winner}");
         }
     } else if (machineMove === "Papel"){
         if(userMove === "Tijera") {
             winner = "User";
+            alert("El ganador es: ${winner}");
         } else if (userMove === "Piedra") {
             winner = "Machine";
+            alert("El ganador es: ${winner}");
         } else {
             winner = "Both";
+            alert("El ganador es: ${winner}");
         }
     } else if (machineMove === "Tijera"){
         if(userMove === "Piedra"){
             winner = "User";
+            alert("El ganador es: ${winner}");
         } else if (userMove === "Papel"){
             winner = "Machine";
+            alert("El ganador es: ${winner}");
         }else {
             winner = "Both";
+            alert("El ganador es: ${winner}");
         }
     }   else {
-        winner = "Unknown"
+        winner = "Unknown";
     }
-
-    console.log({machineMove, randomMoveIndex})
+    
     //mostrar el resultado
+    console.log({ userMove, machineMove});
+    console.log('El ganador es: ${winner}');
 }

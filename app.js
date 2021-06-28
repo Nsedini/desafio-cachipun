@@ -8,17 +8,22 @@ for(let count = 1; count <= repetitionsQty; count = count +1){ //siclo for para 
     // pedir una respuesta
     const userMove = prompt("Ingrese su jugada, debe ser: Piedra, Papel o Tijera");
 
-    const randomMoveIndex = math.floor(math.random() * 3)   /// 1   2    o    3  (elija aleatoriamente)
+    const randomMoveIndex = Math.floor(Math.random() * 3);  /// 1   2    o    3  (elija aleatoriamente)
     let randomMoveText = "";
 
-    If (randomMoveIndex === 1){
+    if (randomMoveIndex === 1) {
         randomMoveText = "Piedra";
     } 
-    else if (randomMoveIndex === 2){
+    else if (randomMoveIndex === 2) {
         randomMoveText = "Papel";
     } 
-    else if (randomMoveIndex === 3){
+    else if (randomMoveIndex === 3) {
         randomMoveText = "Tijera";
     }
+    else {
+        console.error('La opcion randomMoveIndex no es valida: ${randomMoveIndex}');
+    }
+
+    console.log({randomMoveText, randomMoveIndex})
     //mostrar el resultado
 }

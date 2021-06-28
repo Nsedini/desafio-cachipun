@@ -6,6 +6,19 @@ console.log('El usuario quiere que el juego se repita ${repetitionsQty} veces') 
 
 for(let count = 1; count <= repetitionsQty; count = count +1){ //siclo for para realizar el ejercicio repetitionsQty veces con sus 3 condiciones
     // pedir una respuesta
-    
+    const userMove = prompt("Ingrese su jugada, debe ser: Piedra, Papel o Tijera");
+
+    const randomMoveIndex = math.floor(math.random() * 3)   /// 1   2    o    3  (elija aleatoriamente)
+    let randomMoveText = "";
+
+    If (randomMoveIndex === 1){
+        randomMoveText = "Piedra";
+    } 
+    else if (randomMoveIndex === 2){
+        randomMoveText = "Papel";
+    } 
+    else if (randomMoveIndex === 3){
+        randomMoveText = "Tijera";
+    }
     //mostrar el resultado
 }
